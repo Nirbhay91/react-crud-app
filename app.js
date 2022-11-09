@@ -15,6 +15,10 @@ app.use(router);
 
 app.use("/uploads",express.static("./uploads"));
 
+app.get('/',(req,res)=>{
+    res.send("server start")
+})
+
 
 app.listen(port,()=>{
     console.log(`server start at port no ${port}`)

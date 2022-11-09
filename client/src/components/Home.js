@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom"
 import axios from "axios"
 import moment from "moment"
 import Alert from 'react-bootstrap/Alert';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -72,6 +73,7 @@ const Home = () => {
                                             <Card.Text>
                                                 Date Added :{moment(el.date).format("L")}
                                             </Card.Text>
+                                            <Button variant="danger" style={{margin: "15px"}} className='col-lg-6 text-center' component={Link} to={`/register/${el._id}`}>Edit</Button>
                                             <Button variant="danger" className='col-lg-6 text-center' onClick={() => dltUser(el._id)}>Delete</Button>
                                         </Card.Body>
                                     </Card>
